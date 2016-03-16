@@ -121,5 +121,5 @@ class MaxHeap(object):
                 index = self.__Parent(index)
                 
     def Insert(self,key):
-        self.__InsertItem(key-1)
+        self.__InsertItem(key)
         self.IncreaseKey(self.GetHeapSize()-1, key)

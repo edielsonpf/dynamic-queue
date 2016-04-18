@@ -2,7 +2,7 @@
 <Project>
 	<Libs Value=""/>
 	<Flags Value=""/>
-	<Target Value="DynamicQueue.exe"/>
+	<Target Value="DynamicQueue-Project.exe"/>
 	<CommandLine Value=""/>
 	<CompilerOptions Value="-Wall -s"/>
 	<DeleteObjectsBefore Value="Yes"/>
@@ -14,6 +14,6 @@
 	<CompilerType Value="CPP"/>
 	<AppType Value="CONSOLE"/>
 	<Files>
-		<File Name="NovoArquivo.c"/>
+		<File Name="DynamicQueue.c"/>
 	</Files>
 </Project>

@@ -15,5 +15,7 @@
 	<AppType Value="CONSOLE"/>
 	<Files>
 		<File Name="DynamicQueue.c"/>
+		<File Name="DynamicQueue.h"/>
+		<File Name="main.c"/>
 	</Files>
 </Project>

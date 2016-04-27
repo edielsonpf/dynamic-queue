@@ -23,18 +23,18 @@ typedef struct tag_Node{
 /*********************************************************
     private attributes.
 *********************************************************/
-ttag_Node* DynamicQueue_ptagNode = NULL;
+ttag_Node* DynamicQueue_ptagNode;
 
 /*********************************************************
     private operations.
 *********************************************************/
 
-int parent(int iIndex);
-int left(int iIndex);
-int right(int iIndex);
-ttag_Node* getNode(int iIndex);
-void changeNode(ttag_Node* node1,ttag_Node* node2);
-void maxHeapfy(ttag_Node* ptagRaiz);
+int			parent(int iIndex);
+int			left(int iIndex);
+int			right(int iIndex);
+ttag_Node*	getNode(int iIndex);
+void 		changeNode(ttag_Node* node1,ttag_Node* node2);
+void 		maxHeapfy(ttag_Node* ptagRaiz);
 
 /*********************************************************
     Operations implementation
@@ -204,8 +204,6 @@ void DynamicQueue_listQueue(void){
 	}
 	
 	printf("NULL\n");
-
-/*--------------------------------------------------------------------------------------------------*/	
 	
 	if(DynamicQueue_ptagNode != NULL){
 		aux = DynamicQueue_ptagNode->ptagPrev;
@@ -224,7 +222,7 @@ void DynamicQueue_listQueue(void){
 }
 
 /**
-	Get parent of the node.
+	Get parent of the node.(heap view)
 
     @param int iIndex - index that references a node.
     @return int - parent index node.
@@ -236,7 +234,7 @@ int parent(int index){
 }
 
 /**
-	Get left son of the node.
+	Get left son of the node.(heap view)
 
     @param int iIndex - index that references a node.
     @return int - left son index node.
@@ -248,7 +246,7 @@ int left(int index){
 }
 
 /**
-	Get right son of the node.
+	Get right son of the node.(heap view)
 
     @param int iIndex - index that references a node.
     @return int - right son index node.
@@ -332,7 +330,7 @@ void changeNode(ttag_Node* node1, ttag_Node* node2){
 }
 
 /**
-	Get DynamicQueue version
+	This method looks for a node in the queue
 
     @param int iIndex - Index sought node.
     @return pointer to the node of the Index.
@@ -361,9 +359,9 @@ ttag_Node* getNode(int iIndex){
 }
 
 /**
-	Get DynamicQueue version
+	This method sort the queue with maximum priority node.
 
-    @param 
+    @param ttag_Node* ptagRaiz - references the start of the sub-tree heap view
     @return void
     @author jponeticarvalho
     @date   25/04/2016
